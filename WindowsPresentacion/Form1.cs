@@ -14,7 +14,10 @@ namespace WindowsPresentacion
 {
     public partial class Form1 : Form
     {
-        
+        List<Medico> medicos;
+        List<Paciente> pacientes;
+        List<Habitacion> habitaciones;
+
         public Form1()
         {
             InitializeComponent();
@@ -24,10 +27,10 @@ namespace WindowsPresentacion
         {
             
 
-            AdmMedico adminMedico = new AdmMedico();        
-            gridMedicos.DataSource = adminMedico.Listar();
+            //AdmMedico adminMedico = new AdmMedico();        
+            gridMedicos.DataSource = AdmMedico.Listar();
             List<Medico> medicosClinicos;
-            medicosClinicos = adminMedico.Listar("clinico");
+            medicosClinicos = AdmMedico.Listar("clinico");
             foreach (Medico medico in medicosClinicos)
             {
                 lstMedicosClinicos.Items.Add(medico.Nombre + " " + medico.Apellido);
@@ -39,9 +42,9 @@ namespace WindowsPresentacion
         {
             List<Paciente> lista;
 
-            AdmPaciente adminPaciente = new AdmPaciente();
+            //AdmPaciente adminPaciente = new AdmPaciente();
 
-            lista = adminPaciente.Listar();
+            lista = AdmPaciente.Listar();
 
             gridPacientes.DataSource = lista;
 
@@ -49,8 +52,8 @@ namespace WindowsPresentacion
 
         private void btnMostrarHabitaciones_Click(object sender, EventArgs e)
         {
-            AdmHabitacion admHabitaciones = new AdmHabitacion();
-            foreach (Habitacion habitacion in admHabitaciones.Listar())
+            //AdmHabitacion admHabitaciones = new AdmHabitacion();
+            foreach (Habitacion habitacion in AdmHabitacion.Listar())
             {
                 lstHabitaciones.Items.Add("Número: " + habitacion.Numero + ", estado: " + habitacion.Estado);
             }

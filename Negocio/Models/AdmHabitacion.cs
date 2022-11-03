@@ -7,9 +7,10 @@ using System.Threading.Tasks;
 
 namespace Negocio.Models
 {
-    public class AdmHabitacion
+    public static class AdmHabitacion
     {
-        public List<Habitacion> Listar()
+        static List<Habitacion> habitaciones;
+        public static List<Habitacion> Listar()
         {
             List<Habitacion> habitaciones = new List<Habitacion>();
             habitaciones.Add(new Habitacion(0,10,"ocupada") );
@@ -19,25 +20,25 @@ namespace Negocio.Models
             return habitaciones;
         }
 
-        public List<Habitacion> Listar(string estado)
+        public static List<Habitacion> Listar(string estado)
         {
             //TODO...
             return null;
         }
 
-        public int Insertar(Habitacion habitacion)
+        public static int Insertar(Habitacion habitacion)
         {
             //TODO...
             return 0;
         }
 
-        public int Eliminar(int indice)
+        public static int Eliminar(int indice)
         {
             //TODO...
             return 0;
         }
 
-        public int TraerUno(Habitacion habitacion)
+        public static int TraerUno(Habitacion habitacion)
         {
             //TODO...
             return 0;

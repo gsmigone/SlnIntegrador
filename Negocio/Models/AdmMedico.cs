@@ -5,13 +5,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace Negocio.Models
 {
-    public class AdmMedico
+    public static class AdmMedico
     {
-        List<Medico> medicos;
 
-        public List<Medico> Listar()
+        static List<Medico> medicos;
+
+        public static List<Medico> Listar()
         {
             //TODO...
             medicos = new List<Medico>();
@@ -30,7 +32,7 @@ namespace Negocio.Models
             
         }
 
-        public List<Medico> Listar(string especialidad)
+        public static List<Medico> Listar(string especialidad)
         {
             List<Medico> tempMedicos = new List<Medico> { };
             foreach (Medico medico in medicos)
@@ -43,19 +45,19 @@ namespace Negocio.Models
             return tempMedicos;
         }
 
-        public int Insertar(Medico medico)
+        public static int Insertar(Medico medico)
         {
             //TODO...
             return 0;
         }
 
-        public int Eliminar(int indice)
+        public static int Eliminar(int indice)
         {
             //TODO...
             return 0;
         }
 
-        public int TraerUno(Medico medico)
+        public static int TraerUno(Medico medico)
         {
             //TODO...
             return 0;

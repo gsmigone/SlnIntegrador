@@ -7,9 +7,10 @@ using System.Threading.Tasks;
 
 namespace Negocio.Models
 {
-    public class AdmPaciente
+    public static class AdmPaciente
     {
-        public List<Paciente> Listar()
+        static List<Paciente> pacientes;
+        public static List<Paciente> Listar()
         {
             List<Paciente> pacientes = new List<Paciente>();
 
@@ -26,19 +27,19 @@ namespace Negocio.Models
             return pacientes;
         }
 
-        public int Insertar(Paciente paciente)
+        public static int Insertar(Paciente paciente)
         {
             //TODO...
             return 0;
         }
 
-        public int Eliminar(int indice)
+        public static int Eliminar(int indice)
         {
             //TODO...
             return 0;
         }
 
-        public int TraerUno(Paciente medico)
+        public static int TraerUno(Paciente medico)
         {
             //TODO...
             return 0;
