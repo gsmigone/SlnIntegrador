@@ -14,9 +14,9 @@ namespace WindowsPresentacion
 {
     public partial class Form1 : Form
     {
-        List<Medico> medicos;
+        /*List<Medico> medicos;
         List<Paciente> pacientes;
-        List<Habitacion> habitaciones;
+        List<Habitacion> habitaciones;*/
 
         public Form1()
         {
@@ -57,6 +57,14 @@ namespace WindowsPresentacion
             {
                 lstHabitaciones.Items.Add("Número: " + habitacion.Numero + ", estado: " + habitacion.Estado);
             }
+        }
+
+        private void btnEdadPaciente_Click(object sender, EventArgs e)
+        {
+            Paciente paciente = new Paciente(1, "Marcelo", "Della", "Calle3 777", "22333332", "emailpaciente3@gmail.com", "3333", new DateTime(2003, 10, 1));
+            MessageBox.Show("Nombre: " + paciente.Nombre + " Edad: " + paciente.GetEdad.ToString());
+            
+            
         }
     }
 }

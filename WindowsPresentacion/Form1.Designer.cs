@@ -35,6 +35,7 @@
             this.btnMostrarPacientes = new System.Windows.Forms.Button();
             this.gridPacientes = new System.Windows.Forms.DataGridView();
             this.btnMostrarHabitaciones = new System.Windows.Forms.Button();
+            this.btnEdadPaciente = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.gridMedicos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridPacientes)).BeginInit();
             this.SuspendLayout();
@@ -101,11 +102,22 @@
             this.btnMostrarHabitaciones.UseVisualStyleBackColor = true;
             this.btnMostrarHabitaciones.Click += new System.EventHandler(this.btnMostrarHabitaciones_Click);
             // 
+            // btnEdadPaciente
+            // 
+            this.btnEdadPaciente.Location = new System.Drawing.Point(504, 675);
+            this.btnEdadPaciente.Name = "btnEdadPaciente";
+            this.btnEdadPaciente.Size = new System.Drawing.Size(120, 41);
+            this.btnEdadPaciente.TabIndex = 7;
+            this.btnEdadPaciente.Text = "Cargar Paciente Mostar Edad";
+            this.btnEdadPaciente.UseVisualStyleBackColor = true;
+            this.btnEdadPaciente.Click += new System.EventHandler(this.btnEdadPaciente_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 800);
+            this.Controls.Add(this.btnEdadPaciente);
             this.Controls.Add(this.btnMostrarHabitaciones);
             this.Controls.Add(this.gridPacientes);
             this.Controls.Add(this.btnMostrarPacientes);
@@ -130,6 +142,7 @@
         private System.Windows.Forms.Button btnMostrarPacientes;
         private System.Windows.Forms.DataGridView gridPacientes;
         private System.Windows.Forms.Button btnMostrarHabitaciones;
+        private System.Windows.Forms.Button btnEdadPaciente;
     }
 }
 

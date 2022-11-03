@@ -16,10 +16,10 @@ namespace Negocio.Models
 
 
 
-            pacientes.Add(new Paciente(1, "Mariano", "Gob", "Calle1 555", "22333332", "emailpaciente1@gmail.com", "1111"));
-            pacientes.Add(new Paciente(1, "Enzo", "Mastro", "Calle2 666", "22333332", "emailpaciente2@gmail.com", "2222"));
-            pacientes.Add(new Paciente(1, "Marcelo", "Della", "Calle3 777", "22333332", "emailpaciente3@gmail.com", "3333"));
-            pacientes.Add(new Paciente(1, "Fernando", "Casta", "Calle4 888", "22333332", "emailpaciente4@gmail.com", "4444"));
+            pacientes.Add(new Paciente(1, "Mariano", "Gob", "Calle1 555", "22333332", "emailpaciente1@gmail.com", "1111", new DateTime(2001,10,1)));
+            pacientes.Add(new Paciente(1, "Enzo", "Mastro", "Calle2 666", "22333332", "emailpaciente2@gmail.com", "2222", new DateTime(2002, 10, 1)));
+            pacientes.Add(new Paciente(1, "Marcelo", "Della", "Calle3 777", "22333332", "emailpaciente3@gmail.com", "3333", new DateTime(2003, 10, 1)));
+            pacientes.Add(new Paciente(1, "Fernando", "Casta", "Calle4 888", "22333332", "emailpaciente4@gmail.com", "4444", new DateTime(2004, 10, 1)));
 
 
 
@@ -29,6 +29,7 @@ namespace Negocio.Models
 
         public static int Insertar(Paciente paciente)
         {
+            pacientes.Add(paciente);
             //TODO...
             return 0;
         }
@@ -39,7 +40,7 @@ namespace Negocio.Models
             return 0;
         }
 
-        public static int TraerUno(Paciente medico)
+        public static int TraerUno(Paciente paciente)
         {
             //TODO...
             return 0;
